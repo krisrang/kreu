@@ -1,0 +1,113 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./fonts";
+
+html {
+  @apply font-sans bg-pale-blue antialiased h-full overflow-auto;
+  color: hsl(254, 20%, 20%);
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    @apply font-sansVar;
+  }
+}
+
+body {
+  @apply h-full;
+}
+
+main {
+  @apply p-6 h-full flex flex-col;
+}
+
+@media (min-width: 768px) {
+  main {
+    @apply p-12;
+    max-height: 800px;
+  }
+}
+
+h1 {
+  @apply text-gray-800 text-3xl leading-tight max-w-xl;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    @apply text-5xl;
+  }
+}
+
+h1 .name {
+  @apply text-pink-600;
+}
+
+ul {
+  @apply pt-8 text-base italic font-medium flex-1;
+}
+
+@media (min-width: 768px) {
+  ul {
+    @apply pt-12 text-lg;
+  }
+}
+
+ul li {
+  @apply flex items-center;
+}
+
+ul svg {
+  @apply mr-2;
+  width: 1rem;
+  height: 1rem;
+  fill: white;
+}
+
+.contact {
+  @apply max-w-sm;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    @apply pt-40;
+  }
+}
+
+h3 {
+  @apply text-xl text-gray-800 pb-2 mb-8 border-b border-gray-300;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    @apply text-2xl;
+  }
+}
+
+.contact a {
+  @apply my-2 font-medium;
+  display: flex;
+  align-items: center;
+  color: hsl(254, 15%, 30%);
+  fill: hsl(254, 20%, 20%);
+}
+
+.contact svg {
+  @apply mr-2;
+  width: 25px;
+  height: 25px;
+}
+
+.contact a:hover {
+  fill: #d53f8c;
+  color: #d53f8c;
+}
+
+.cat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 47px;
+  height: 80px;
+  background: url(/assets/cat.png) no-repeat;
+}
